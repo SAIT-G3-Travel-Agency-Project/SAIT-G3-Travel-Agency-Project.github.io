@@ -1,0 +1,462 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0 60px;
+	background: #EEE;
+	box-shadow: 2px 2px 250px #e4e4e4 inset;
+	background: #EEE;
+	background-size: cover;
+	position: absolute;
+}
+
+#homepage {
+	background: #EEE url('../images/frontpage_background_image.jpeg');
+}
+
+#homepage footer { 
+	background: #FFF;
+}
+
+.bg-opacity { 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background: rgba(255,255,255,0.7);
+    min-height: 100%;
+    float: left;
+    position: absolute;
+}
+
+p, a, b, i, dl, dt, dd { font-family: Lato; }
+
+/* HEADER CODE */
+
+header.main-header {
+	border-bottom: 1px solid #EEE;
+	float: left;
+	width: 100%;
+	background: #FAFAFA;
+	position: relative;
+	background: url('../images/travel-header-image.jpeg');    
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;	
+}
+header.main-header img, header.main-header h1 {
+	float: left;
+}
+header.main-header img.logo { 
+	padding-left: 40px;
+	margin-top: -15px;
+	z-index: 1;
+	position: relative;
+}
+header.main-header h1 {
+    font-family: Indie Flower;
+    padding: 15px 0 0 40px;
+    float: right;
+    padding-right: 40px;
+	z-index: 1;
+	position: relative;
+}
+header.main-header nav { 
+    float: left;
+    padding: 65px 0;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+header.main-header nav a {
+	position: relative;
+}
+header.main-header nav i { 
+    position: absolute;
+    left: 20%;
+    color: #ccc;
+    top: -36px;
+    z-index: -1;
+    border-radius: unset;
+    text-shadow: unset;
+	z-index: 1;
+}
+header.main-header .overlay { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(255,255,255,0.94);
+	box-shadow: 2px 2px 150px #EEE inset;
+}
+header.main-header nav i:before {
+	font-size: 30px;
+}
+header.main-header a { 
+    padding-right: 20px;
+    font-family: Lato;
+    text-decoration: unset !important;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+	z-index: 1;
+}
+header.main-header span.welcome-tagline b { 
+	font-family: Indie Flower;
+}
+
+/* MAIN SECTION */
+
+.column-3 {
+	float: left;
+	width: 33.3%;
+	padding: 10px;
+}
+.column-4 {
+	float: left;
+	width: 25%;
+	padding: 10px;
+}
+.column-2 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+.column-12 {
+	float: left;
+	width: 100%;
+	padding: 10px;
+}
+section::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+section {
+	padding: 0 20px;
+	background: #FFF;
+	padding-bottom: 40px;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+section img {
+	margin-top: 20px;
+	width: 100%;
+	height: 220px;
+	border-radius: 10px;
+	border: 5px solid #FFFF;
+	box-shadow: 2px 2px 5px #eee;
+}
+section h1, section h2, section h3, section h4, section h5, section h6 {
+	padding: 20px 0;
+	font-family: Lato;
+}
+
+section h2 { 
+	font-size: 30px;
+}
+
+/* TRAVEL IMAGES */
+
+section.travel-images img {
+	border-radius: 25px 25px 0 0;
+	border: 0;
+	box-shadow: unset;
+}
+section.travel-images p.description {
+    font-size: 18px;
+    border: 1px solid #EEE;
+    border-top: 0;
+    padding: 20px;
+    margin-top: 0;
+    background: #FEFEFE;
+    float: left;     margin-top: -3px;
+    box-shadow: 1px 1px 1px #eee; border-radius: 0 0 25px 25px;	
+}
+section.travel-images .image-container {
+	position: relative;
+	float: left;
+}
+section.travel-images {
+	padding-bottom: 0;
+}
+section.travel-images span {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	background: #FFF;
+	font-weight: 700;
+	text-align: center;
+	font-family: 'Indie Flower';
+	margin: 0 auto;
+	width: 50%;
+	font-size: 25px;
+	color: #1fc11f;
+	border-radius: 32px;
+}
+
+/* PLAN YOUR TRAVEL JOURNEY */
+
+section.plan-your-travel-journey { 
+    background: #FCFCFC;
+    border-top: 1px solid #EEE;
+    padding: 60px;
+    box-shadow: 2px 2px 200px #E8E8E8 inset;
+}
+
+section.plan-your-travel-journey h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 42px;
+}
+
+section.plan-your-travel-journey h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 27px;
+    color: #555;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* CONTACT */
+
+section.contact {
+	min-height: 500px;
+}
+
+section.contact .page-heading { 
+	padding-left: 15px;
+	font-size: 35px;
+}
+section.contact dl a {
+	background: #EEE;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #555;
+    font-size: 20px;
+}
+section.contact dl a:hover {
+	background: #DDD;
+}
+section.contact h2,
+section.contact h4, 
+section.contact h3 {
+	padding: 0 0 10px 0; 
+	margin: 0; 
+}
+
+section.contact dd { 
+	margin: 0;
+}
+
+.cta { 
+	position: relative;
+	background-size: cover !important;
+	background-position: center !important;
+	float: left;
+    background: url('../images/call-to-action.jpeg');
+    width: 100%;
+    box-shadow: 100px 270px 250px #555 inset;
+	padding: 70px 0 100px;
+}
+
+
+.cta h1 { 
+    float: left;
+    position: relative;
+    z-index: 999;
+    padding: 0;
+    font-family: 'Indie Flower';
+    text-align: center;
+    width: 100%;
+	margin-top: 0;
+    font-size: 121px;
+    text-shadow: 2px 5px 1px #222;
+    color: #FFF;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.cta h3 { 
+	float: left;
+    position: relative;
+    z-index: 999;
+    padding: 0;
+    font-family: 'Indie Flower';
+    text-align: center;
+    width: 100%;
+    font-size: 36px;
+    text-shadow: 3px 2px 1px #222;
+    color: #FFF;
+    margin-top: 0;
+	margin-bottom: 0;
+}
+
+.cta-opacity { 
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    float: left;
+    position: absolute;
+    background: rgba(110,30,120,0.3);
+}
+
+div.detailed-img-opacity { 
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    float: left;
+    position: absolute;
+    background: rgba(110,30,120,0.3);
+}
+
+.detailed-image {
+	position: relative;
+	width: 100%;
+	background-position: center !important;
+	background-size: cover !important;
+	border: 10px solid #FFF;
+	float: left;
+	height: 300px;
+	box-shadow: 2px 2px 5px #eee;
+}
+.detailed-image:hover {
+	opacity: 0.8;
+}
+.detailed-image span {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	background: #FFF;
+	font-size: 40px;
+	font-weight: 600;
+	padding: 10px 40px;
+	border-radius: 0 20px 20px 0;
+	font-family: Indie Flower;
+	color: #11accc;
+	z-index: 1;
+}
+
+/* REGISTER PAGE */
+
+section.register { 
+	padding: 0;
+}
+section.register h1 {
+	font-size: 40px;
+}
+section.register .column-2:first-child {
+	padding: 50px 100px;
+}
+section.register form div.field-container h3.field-heading { 
+	font-weight: 500;
+	padding-top: 25px;
+	margin-bottom: 0;
+}
+section.register form div.field-container h3.field-heading:first-child {
+	padding-top: 0;
+}
+section.register form div.field-container {
+	position: relative;
+}
+section.register form div.field-container h3.field-heading  i {  
+	float: right;
+	background: #FFF;
+	border-radius: 50%;
+	border: 1px solid #EEE;
+	padding: 10px;
+	position: absolute;
+	right: -20px;
+	bottom: -15px; 
+}
+section.register form input { 
+	border: 1px solid #F1F1F1;
+	padding: 15px 10px;
+	box-shadow: 2px 2px 1px #EEE;  
+	width: 100%;	
+}
+section.register form input.submit {
+	float: left;
+	width: 100%;
+	margin-top: 25px;
+	background: #FEB144;
+	padding: 20px 9px;
+	font-family: 'Lato';
+	font-size: 25px;
+	border: 0 !important;
+}
+section.register form input.submit:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+section.register div.register-image {
+	background: url('../images/register-image.jpeg');     
+	float: left;
+	height: 700px;
+	z-index: 99999;
+	position: relative;
+	min-height: 700px;
+	background-position: center; 
+	background-size: cover;	
+	padding: 0;
+}
+
+/* FOOTER */
+
+div.rgb-line { 
+	width: 100%;
+    height: 15px;
+    max-height: 5px;
+    float: left;
+    display: inline-block;
+    min-height: 5px;
+    position: relative;
+}
+div.rgb-line span {
+    height: 5px;
+    width: 16.66666666%;
+    float: inherit;
+    max-width: 100%;
+    display: block;
+}
+span.l1 {
+	background: #CC99C9;
+} 
+span.l2 { 
+	background:  #9EC1CF; 
+} 
+span.l3 { 
+	background: #9EE09E;
+} 
+span.l4 {
+	background: #FDFD97;
+} 
+span.l5 { 
+	background: #FF7F00;
+} 
+span.l6 { 
+	background: #FF0000;
+}
+
+footer {
+	position: relative;
+	padding: 30px 0;
+	background: #F3F3F3;
+	padding: 40px 40px;
+	border-top: 1px solid #EEE;
+	float: left;
+	width: 100%;
+}
