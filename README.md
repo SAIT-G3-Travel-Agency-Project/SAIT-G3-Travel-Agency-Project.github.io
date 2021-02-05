@@ -1,4 +1,4 @@
-# Travel-Agency-Website-Template
+# Travel Agency Website Template
 
 A SAIT Project based on a fictional Travel Agency.
 
