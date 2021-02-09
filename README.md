@@ -9,25 +9,25 @@ Project created by: Lina Orozco, Vasily Patrashkevich and Dallas Rowling
 
 # Changelog 
 
-###1.0###
+##1.0##
 - Created index.html, contact.html and register.html (coming soon)
 
-###1.1###
+##1.1##
 - Added stylesheet.css
 
-###1.2###
+##1.2##
 - Added form to register.html
 - Added HTML5 elements 
 
-###1.3###
+##1.3##
 - CSS/HTML code cleanup
 - Contact.html updated
 
-###1.4###
+##1.4##
 - CSS/HTML updates
 
-###1.5###
+##1.5##
 - Added newsletter.html
 
-###1.6###
+##1.6##
 - Added new changes to register.html form with clear + submit + JavaScript
