@@ -1,38 +1,107 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 	<html>
-	<body>
-	<!-- ADD STYLING + GOOGLE FONTS + ICONS  -->
-	<link href="assets/css/style.css" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">	
-	<script src="https://kit.fontawesome.com/a9160c819c.js" crossorigin="anonymous"></script>
-	
+	<head>
+		<!-- ADD STYLING + GOOGLE FONTS + ICONS  -->
+		<link href="assets/css/style.css" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">	
+		<script src="https://kit.fontawesome.com/a9160c819c.js" crossorigin="anonymous"></script>
+		<meta name="author" content="G3 - Dallas R. Vasily P. Lina O.">
+		<title>Travel Experts Register</title>
+		<link rel="shortcut icon" href="assets/images/favicon.ico" type="favicon-16x16">
+	</head>
+	<!--postal code check-->
+	<script>
+		function checkPostal(postal)
+		var IsRegChecked=false;
+		{
+			var reg = /(^[a-z]\d[a-z] ?\d[a-z]\d$)|(\d{5}( \d{4})?)/i;
+			if (!reg.test(postal.value))
+			{
+				alert("Postal code has an invalid value");
+				//postal.focus();
+				postal.style.backgroundColor = "red";
+			}
+			else
+			{
+				IsRegChecked=true;
+			}
+		}
+		function con(x)
+		{
+			if IsRegChecked
+			{
+				confirm("Do you want to "+x+" the form?");
+			}
+			else 
+			{	
+				checkPostal;
+			}
+		}
+	</script>
 
 	<!-- START HEADER -->
 	<header class="main-header">
 		<span class="overlay"></span>
 		<a href="index.html"><img class="logo" src="assets/images/travel_agency.png"/></a>
-		<nav><a href="contact.html"><i class="fas fa-comments"></i> Contact </a> <a href="register.html"><i class="fas fa-plane-departure"></i> Register</a></nav>
+		<nav><a href="contact.html"><i class="fas fa-comments"></i> Contact </a> <a href="register.html"><i class="fas fa-plane-departure"></i> Register</a> <a href="newsletter.html"><i class="fas fa-envelope"></i> Newsletter</a></nav>
 		<h1><i class="fas fa-globe-americas"></i>
-		<span class="welcome-tagline">Welcome to <b style="color:#9400D3;">T</b><b style="color:#1fc11f;">r</b><b style="color:#CC99C9">a</b><b style="color:#FF6663;">v</b><b style="color:#FEB144">e</b><b style="color: #9EC1CF;">l</b> Experts</span></h1>
+		<span class="welcome-tagline">Welcome to <b class="wt-t">T</b><b class="wt-r">r</b><b class="wt-a">a</b><b class="wt-v">v</b><b class="wt-e">e</b><b class="wt-l">l</b> Experts</span></h1>
 	</header>
 	<!-- END HEADER -->
  
-	<section class="register">
-		<div class="column-2" style="">
+	<section class="form-style-1">
+		<div class="column-2">
 			<h1><i class="fa fa-user-circle" aria-hidden="true"></i> Register </h1>
+
 			<form action="assets/scripts/bouncer.php" method="GET"> 
-				<div class="field-container">
-					<h3 class="field-heading">First name<i style="" class="fa fa-user" aria-hidden="true"></i></h3>
-				</div>
-				<input type="text" name="firstname"> <br> 
 				
+				<div class="field-container">
+					<h3 class="field-heading">First name<i  class="fa fa-user" aria-hidden="true"></i></h3>
+				</div>
+				<input type="text" name="firstname" id="firstname"> <br> 
+
 				<div class="field-container">
 					<h3 class="field-heading">Last name</h3>
 				</div>
 				<input type="text" name="lastname"> 
+
+				<div class="field-container">
+					<h3 class="field-heading">Address</h3>
+				</div>
+				<input type="text" name="address"> 
+
+				<div class="field-container">
+					<h3 class="field-heading">City</h3>
+				</div>
+				<input type="text" name="\city"> 
+
+				<div class="field-container">
+					<h3 class="field-heading">Province</h3>
+				</div>
+				<select name="prov">
+					<option value="AB">Alberta</option>
+              			<option value="BC">British Columbia</option>
+              			<option value="MB">Manitoba</option>
+              			<option value="NB">New Brunswick</option>
+              			<option value="NL">Newfoundland and Labrador</option>
+              			<option value="NT">Northwest Territories</option>
+              			<option value="NS">Nova Scotia</option>
+              			<option value="NU">Nunavut</option>
+              			<option value="ON">Ontario</option>
+              			<option value="PEI">Prince Edward Island</option>
+              			<option value="QC">Quebec</option>
+              			<option value="SK">Saskatchewan</option>
+              			<option value="YT">Yukon</option>
+
+				</select>
+
+				<div class="field-container">
+					<h3 class="field-heading">Postal Code</h3>
+				</div>
+				<input type="text" name="postal" required="required" onchange="checkPostal(this)"> 
 				
 				<div class="field-container">
 					<h3 class="field-heading"><i class="fa fa-phone" aria-hidden="true"></i>Phone number</h3>
@@ -40,7 +109,10 @@
 				<input type="text" name="phonenumber"> 
 				
 				<input type="hidden" name="form_submitted" value="1" />
-				<input class="submit" type="submit" value="Submit">
+			
+				<input class="submit" type="submit" value="Submit" onClick="con('submit')">
+				<input class="clear" type="reset" value="Clear" onClick="con('reset')">
+				
 			</form>
 		</div>
 		<div class="column-2 register-image"></div>
