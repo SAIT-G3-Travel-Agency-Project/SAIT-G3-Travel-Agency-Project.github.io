@@ -215,6 +215,22 @@ section h2 {
 
 /* TRAVEL IMAGES */
 
+section.travel-images #Bali span {
+	color: #1fc11f;
+}
+
+section.travel-images #California span {
+	color:#9400D3;
+}
+
+section.travel-images #Fiji span {
+	color:#FF7F00;
+}
+
+section.travel-images #Dubai span {
+	color:#FF6663;
+}
+
 section.travel-images img {
 	border-radius: 25px 25px 0 0;
 	border: 0;
