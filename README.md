@@ -31,3 +31,6 @@ Project created by: Lina Orozco, Vasily Patrashkevich and Dallas Rowling
 
 ### 1.6 ###
 - Added new changes to register.html form with clear + submit + JavaScript
+
+### 1.7 ###
+- Added tooltips to the register.html page with JavaScript
