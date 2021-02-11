@@ -576,6 +576,11 @@ section.newsletter .overlay {
 	z-index: 1;
 	background: rgba(100,5,105,0.75);
 }
+.tooltip {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
 
 /* FOOTER */
 
