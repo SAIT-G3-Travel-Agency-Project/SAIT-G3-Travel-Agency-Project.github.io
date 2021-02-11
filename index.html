@@ -28,21 +28,7 @@
 		<div class="cta-opacity"></div>
 	</div>
 	
-	<section class="travel-images">
-		<div class="column-4">
-			<div class="image-container"><img src="assets/images/travel_image_1.jpg"><span>Bali</span></div><p class="description">A little plume of white sand rises out of the blue Indian Ocean and fills a cove below limestone cliffs clad in deep green tropical beauty. </p>
-		</div>
-		<div class="column-4">
-			<div class="image-container"><img src="assets/images/travel_image_2.jpg"><span style="color:#9400D3;">California</span></div><p class="description">The coastline north of San Diego has some of the best sandy beaches, high-quality restaurants and tourist attractions in the world.</p>
-		</div>
-		<div class="column-4">
-			<div class="image-container"><img src="assets/images/travel_image_3.jpg"><span  style="color:#FF7F00;">Fiji</span></div><p class="description">Lush tropical and pine vegetation is spread across the interior lands and white sandy beaches of the Fijian islands.</p>
-		</div>
-		<div class="column-4">
-			<div class="image-container"><img src="assets/images/travel_image_4.jpg"><span  style="color:#FF6663;">Dubai</span></div><p class="description">Dubai Holidays are world-famous for shopping as there are more than 250 shopping malls, including the largest mall in the world, Dubai Mall.</p>
-		</div>  
-	</section>
-	
+	<section class="travel-images" id="TravelList"></section>
 	
 	<section class="plan-your-travel-journey">
 		<div class="column-12">
@@ -67,7 +53,33 @@
 		<span><b>&copy; 2021 Paradise Travel Agency</b></span>
 	</footer>
 	<!-- END FOOTER -->
-	
-
 	</body>
+	<script>
+		let travel_locations = [{
+		  image: 'assets/images/travel_image_1.jpg',
+		  title: 'Bali',
+		  description: 'A little plume of white sand rises out of the blue Indian Ocean and fills a cove below limestone cliffs clad in deep green tropical beauty.'
+		}, {
+		  image: 'assets/images/travel_image_2.jpg',
+		  title: 'California',
+		  description: 'The coastline north of San Diego has some of the best sandy beaches, high-quality restaurants and tourist attractions in the world.'
+		}, {
+		  image: 'assets/images/travel_image_3.jpg',
+		  title: 'Fiji',
+		  description: 'Lush tropical and pine vegetation is spread across the interior lands and white sandy beaches of the Fijian islands.'
+		}, {
+		  image: 'assets/images/travel_image_4.jpg',
+		  title: 'Dubai',
+		  description: 'Dubai Holidays are world-famous for shopping as there are more than 250 shopping malls, including the largest mall in the world, Dubai Mall.'
+		}
+
+		];
+		let TravelList = document.getElementById('TravelList');
+		let list = "";
+		travel_locations.forEach(travel_location => {
+		  list += "<div id="+ travel_location.title +" class=\"column-4\"><div class=\"image-container\"><img src='" + travel_location.image + "'><span>" + travel_location.title + "</span></div>";
+		  list += "<p class=\"description\">" + travel_location.description + "</p></div>";
+		});
+		TravelList.innerHTML += list;
+	</script>	
 </html>
