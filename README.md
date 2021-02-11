@@ -34,3 +34,7 @@ Project created by: Lina Orozco, Vasily Patrashkevich and Dallas Rowling
 
 ### 1.7 ###
 - Added tooltips to the register.html page with JavaScript
+
+### 1.8 ###
+- Travel images is now displayed primarily with JavaScript that is added to the bottom of index.html completing the exercise.
+- Extra challenge is not completed
