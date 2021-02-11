@@ -24,6 +24,18 @@
 				postal.style.backgroundColor = "red";
 			}
 		}
+		
+		document.getElementById("field-container").addEventListener("focusin", FocusIn);
+		document.getElementById("field-container").addEventListener("focusout", FocusOut);
+		x = document.getElementById("field-container");
+
+		function FocusOut(x) {
+			document.getElementById(x).style.display = "none";		
+		}
+
+		function FocusIn(x) {
+			document.getElementById(x).style.display = "inline";		
+		}		
 	</script>
 
 	<!-- START HEADER -->
@@ -44,53 +56,59 @@
 				
 				<div class="field-container">
 					<h3 class="field-heading">First name<i  class="fa fa-user" aria-hidden="true"></i></h3>
+					<input type="text" name="firstname" id="firstname" onBlur="FocusOut('tooltip-1')" onFocus="FocusIn('tooltip-1')">
+					<p style="display: none;" class="tooltip" id="tooltip-1">Please enter your first name.</p>
 				</div>
-				<input type="text" name="firstname" id="firstname"> <br> 
 
 				<div class="field-container">
 					<h3 class="field-heading">Last name</h3>
+					<input type="text" name="lastname" id="lastname" onBlur="FocusOut('tooltip-2')" onFocus="FocusIn('tooltip-2')">
+					<p style="display: none;" class="tooltip" id="tooltip-2">Please enter your last name.</p>
 				</div>
-				<input type="text" name="lastname"> 
-
+				
 				<div class="field-container">
 					<h3 class="field-heading">Address</h3>
+					<input type="text" name="address" id="address" onBlur="FocusOut('tooltip-3')" onFocus="FocusIn('tooltip-3')">
+					<p style="display: none;" class="tooltip" id="tooltip-3">Please enter your address.</p>
 				</div>
-				<input type="text" name="address"> 
 
 				<div class="field-container">
 					<h3 class="field-heading">City</h3>
+					<input type="text" name="city" id="city" onBlur="FocusOut('tooltip-4')" onFocus="FocusIn('tooltip-4')">
+					<p style="display: none;" class="tooltip" id="tooltip-4">Please enter your city.</p>
 				</div>
-				<input type="text" name="\city"> 
 
 				<div class="field-container">
 					<h3 class="field-heading">Province</h3>
+					<select onBlur="FocusOut('tooltip-5')" onFocus="FocusIn('tooltip-5')" name="prov">
+						<option value="AB">Alberta</option>
+							<option value="BC">British Columbia</option>
+							<option value="MB">Manitoba</option>
+							<option value="NB">New Brunswick</option>
+							<option value="NL">Newfoundland and Labrador</option>
+							<option value="NT">Northwest Territories</option>
+							<option value="NS">Nova Scotia</option>
+							<option value="NU">Nunavut</option>
+							<option value="ON">Ontario</option>
+							<option value="PEI">Prince Edward Island</option>
+							<option value="QC">Quebec</option>
+							<option value="SK">Saskatchewan</option>
+							<option value="YT">Yukon</option>
+					</select>
+					<p style="display: none;" class="tooltip" id="tooltip-5">Please enter your province.</p>					
 				</div>
-				<select name="prov">
-					<option value="AB">Alberta</option>
-              			<option value="BC">British Columbia</option>
-              			<option value="MB">Manitoba</option>
-              			<option value="NB">New Brunswick</option>
-              			<option value="NL">Newfoundland and Labrador</option>
-              			<option value="NT">Northwest Territories</option>
-              			<option value="NS">Nova Scotia</option>
-              			<option value="NU">Nunavut</option>
-              			<option value="ON">Ontario</option>
-              			<option value="PEI">Prince Edward Island</option>
-              			<option value="QC">Quebec</option>
-              			<option value="SK">Saskatchewan</option>
-              			<option value="YT">Yukon</option>
-
-				</select>
 
 				<div class="field-container">
 					<h3 class="field-heading">Postal Code</h3>
-				</div>
-				<input type="text" name="postal" required="required" onchange="checkPostal(this)"> 
+					<input type="text" name="postal" required="required" id="postal" onchange="checkPostal(this)" onBlur="FocusOut('tooltip-6')" onFocus="FocusIn('tooltip-6')">
+					<p style="display: none;" class="tooltip" id="tooltip-6">Please enter your postal code.</p>
+				</div>				
 				
 				<div class="field-container">
 					<h3 class="field-heading"><i class="fa fa-phone" aria-hidden="true"></i>Phone number</h3>
+					<input type="text" name="phonenumber" id="phonenumber" onBlur="FocusOut('tooltip-7')" onFocus="FocusIn('tooltip-7')">
+					<p style="display: none;" class="tooltip" id="tooltip-7">Please enter your phone number.</p>
 				</div>
-				<input type="text" name="phonenumber"> 
 				
 				<input type="hidden" name="form_submitted" value="1" />
 			
