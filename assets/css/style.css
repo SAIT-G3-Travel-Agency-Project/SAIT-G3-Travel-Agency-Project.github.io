@@ -120,6 +120,12 @@ header.main-header a {
     text-align: center;
     margin: 0 auto;
     margin-left: 20px;
+	transition: color 0.5s;
+}
+
+header.main-header a:hover { 
+	border-bottom: 1px solid black;
+	color: black;	
 }
 
 header.main-header a:first-child { 
