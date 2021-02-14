@@ -121,6 +121,8 @@ header.main-header a {
     margin: 0 auto;
     margin-left: 20px;
 	transition: color 0.5s;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
 }
 
 header.main-header a:hover { 
