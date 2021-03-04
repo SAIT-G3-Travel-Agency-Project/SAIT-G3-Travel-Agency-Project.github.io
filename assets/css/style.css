@@ -4,16 +4,23 @@
 
 body {
 	margin: 0;
-	padding: 0 60px;
 	background: #EEE;
 	box-shadow: 2px 2px 250px #e4e4e4 inset;
-	background: #EEE;
 	background-size: cover;
 	position: absolute;
+	padding: 0 80px;
 }
 
-#homepage {
-	background: #EEE url('../images/frontpage_background_image.jpeg');
+#homepage { 
+	padding: 0;
+}
+
+#homepage img.logo { 
+    background: #FFF;
+    display: block;
+    border-radius: 0 0 20px 20px;
+	padding-left: 0;
+	margin-left: 30px;
 }
 
 #homepage footer { 
@@ -37,13 +44,25 @@ p, a, b, i, dl, dt, dd {
 
 /* HEADER CODE */
 
-header.main-header {
-	border-bottom: 1px solid #EEE;
+#homepage header.main-header {
+	z-index: 3;
 	float: left;
 	width: 100%;
-	background: #FAFAFA;
+	background: transparent;
+	position: absolute;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;	
+	top: 0;
+	left: 0;
+}
+
+header.main-header {
+	z-index: 3;
+	float: left;
+	width: 100%;
+	background: transparent;
 	position: relative;
-	background: url('../images/travel-header-image.jpeg');    
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat;	
@@ -67,6 +86,23 @@ header.main-header h1 {
     padding-right: 40px;
 	z-index: 1;
 	position: relative;
+}
+
+#homepage header.main-header nav { 
+    float: right;
+    padding: 65px 60px 0 0;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+
+#homepage header.main-header nav a, #homepage header.main-header nav a:hover {
+	position: relative;
+	color: #FFF;
+	text-decoration: none !important;
+}
+
+#homepage header.main-header nav a:hover i, header.main-header nav a:hover i { 
+	top: -41px;
 }
 
 header.main-header nav { 
@@ -114,7 +150,6 @@ header.main-header a {
     font-size: 16px;
     width: 100%;
     font-weight: 700;
-	text-color: #8a8a8a;
     color: #333;
     text-transform: uppercase;
     z-index: 1;
@@ -122,14 +157,61 @@ header.main-header a {
     margin: 0 auto;
     margin-left: 20px;
 	transition: color 0.5s;
-	border-bottom: 1px solid transparent;
-	transition: border-bottom 0.5s;
+	border-bottom: none !Important;
 }
 
-header.main-header a:hover { 
-	border-bottom: 1px solid black;
-	color: black;	
+header.main-header a:first-child { 
+	margin-left: 0;
 }
+header.main-header nav i {
+	transition: top ease 0.5s;
+}
+
+#homepage header.main-header nav i { 
+	transition: top ease 0.5s;
+	position: absolute;
+    margin: 0 auto;
+    color: #ccc;
+    top: -36px;
+    border-radius: unset;
+    text-shadow: unset;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+#homepage header.main-header .overlay { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: transparent;
+}
+
+#homepage header.main-header nav i:before {
+	font-size: 30px;
+	color: #FFF;
+}
+
+#homepage header.main-header a { 
+    padding-right: 0;
+    font-family: Lato;
+    text-decoration: unset !important;
+    font-size: 21px;
+    width: 100%;
+    font-weight: 500;
+    color: #FFF;
+    text-transform: lowercase;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 20px;
+	transition: color 0.5s;
+	border-bottom: unset;
+}
+
 
 header.main-header a:first-child { 
 	margin-left: 0;
@@ -196,7 +278,7 @@ section::after {
 }
 
 section {
-	padding: 0 20px;
+	padding: 0 80px;
 	background: #FFF;
 	padding-bottom: 40px;
 	float: left;
@@ -240,13 +322,39 @@ section.travel-images #Dubai span {
 	color:#FF6663;
 }
 
-section.travel-images img {
+section.travel-deals #Easter span {
+	color: #FFa150;
+}
+
+section.travel-deals #Everest span {
+	color:#ff1F1f;
+}
+
+section.travel-deals #Antartica span {
+	color:#a11aaa;
+}
+
+section.travel-deals #Bora span {
+	color:#1faa88;
+}
+
+section.travel-images img, section.travel-deals img {
 	border-radius: 25px 25px 0 0;
 	border: 0;
 	box-shadow: unset;
 }
 
-section.travel-images p.description {
+section.travel-deals .column-4 {
+	transition: top ease 0.5s;
+	top: 0;
+}
+
+section.travel-deals .column-4:hover { 
+	top: -5px;
+}
+
+
+section.travel-images p.description, section.travel-deals p.description {
     font-size: 18px;
     border: 1px solid #EEE;
     border-top: 0;
@@ -257,16 +365,48 @@ section.travel-images p.description {
     box-shadow: 1px 1px 1px #eee; border-radius: 0 0 25px 25px;	
 }
 
-section.travel-images .image-container {
+section.travel-deals h2.deals-heading { 
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-family: 'Indie Flower';
+    font-size: 60px;
+    text-align: center;
+    padding-top: 0;
+    margin-top: 15px;
+}
+
+section.travel-deals span.deals-sub-heading { 
+position: relative;
+    margin-bottom: 0;
+    font-family: 'Indie Flower';
+    font-size: 30px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+}
+
+section.travel-deals a:hover {
+	cursor: pointer;
+}
+
+section.travel-images .column-4, section.travel-deals .column-4 {
+	position: relative;
+	z-index: 3;
+}
+
+section.travel-images .image-container, section.travel-deals .image-container {
 	position: relative;
 	float: left;
 }
 
 section.travel-images {
 	padding-bottom: 0;
+	margin-top: -75px;
 }
 
-section.travel-images span {
+
+section.travel-images span, section.travel-deals span {
 	position: absolute;
 	bottom: 15px;
 	left: 15px;
@@ -281,12 +421,14 @@ section.travel-images span {
 	border-radius: 32px;
 }
 
+ section.travel-deals span { font-size: 22px; }
+
 /* PLAN YOUR TRAVEL JOURNEY */
 
 section.plan-your-travel-journey { 
     background: #FCFCFC;
     border-top: 1px solid #EEE;
-    padding: 60px;
+    padding: 60px 80px;
     box-shadow: 2px 2px 200px #E8E8E8 inset;
 }
 
@@ -340,6 +482,13 @@ section.contact dd {
 	margin: 0;
 }
 
+#cta-promotions {
+    position: relative;
+	height: 600px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
 .cta { 
 	position: relative;
 	background-size: cover !important;
@@ -348,7 +497,29 @@ section.contact dd {
     background: url('../images/call-to-action.jpeg');
     width: 100%;
     box-shadow: 100px 270px 250px #555 inset;
-	padding: 70px 0 100px;
+	padding: 150px 0 100px;
+	list-style: none;
+	margin: 0;
+}
+
+.cta {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.cta-visible {
+    opacity: 1;
+    z-index: 2;
 }
 
 
@@ -381,6 +552,14 @@ section.contact dd {
     color: #FFF;
     margin-top: 0;
 	margin-bottom: 0;
+}
+
+.cta:nth-child(2) {
+	background-image:url('../images/call-to-action-2.jpeg');
+}
+
+.cta:nth-child(2) .cta-opacity {
+	background-color: rgba(230,80,30,0.8) !important
 }
 
 .cta-opacity { 
