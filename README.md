@@ -45,4 +45,4 @@ Project created by: Lina Orozco, Vasily Patrashkevich and Dallas Rowling
 
 ### 1.10 ###
 
-- "Contact Page update
+- Contact Page update
