@@ -839,3 +839,173 @@ footer {
 	float: left;
 	width: 100%;
 }
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Contact Style -L
+Travel word Colors 	#9400D3 	#1fc11f 	#CC99C9 	#FF6663 	#FEB144 	#9EC1CF
+Logo colors 		#FEC20C 	#00A3E8 	#B97A57 	#880016								
+font-family: Indie Flower; 
+font-family: Lato;						*/
+
+.section.cont1 {
+	padding-bottom: 0;
+	border-radius: 25px;
+	  
+  }
+  
+.cont2 {
+	float: left;
+	width: 32%;
+	padding: 10px;
+	justify-content: space-between;
+	border-radius: 25px;
+	margin-top: 1%;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+	  
+  } 
+  
+  .cont3{
+	width: auto;
+	justify-content: center;
+	border-radius: 25px;
+	padding-left: 30px;
+	padding-top: 10px;
+	padding: 1%;
+	  
+  }
+  
+  .pic {
+	border-radius: 25px;
+	border: 0;
+	box-shadow: unset;
+	width: 100%;
+	justify-content: center;
+	  
+  } 
+  
+  .cont2 span {
+	background: #FEC20C;
+	font-weight: 700;
+	text-align: center;
+	font-family: Lato;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 1%;
+	margin: 10px;
+	font-size: 25px;
+	border-radius: 25px;
+	color: #00A3E8;
+	
+	}
+
+.cont2 span:hover {
+	opacity: 0.7;
+	cursor: pointer;
+	}
+
+	
+    
+.caption{
+	font-family: Lato;
+  }
+
+  /* Team*/
+  
+.cont4 {
+	padding-bottom: 0;
+	  
+  }
+
+.cont4 h1{
+	font-weight: 700;
+	text-align: center;
+	font-family: Lato;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 1%;
+	margin: 10px;
+	font-size: 25px;
+	border-radius: 25px;
+	color: #00A3E8;
+}
+  
+.cont5 {
+	float: left;
+	width: 32%;
+	padding: 10px;
+	justify-content: space-between;
+	border-radius: 25px;
+	margin-top: 1%;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+	  
+  } 
+  
+.cont6{
+	width: auto;
+	justify-content: center;
+	border-radius: 25px;
+	padding-left: 30px;
+	padding-top: 10px;
+	padding: 1%;
+	  
+  }
+  
+.team {
+	  border-radius: 25px;
+	  border: 0;
+	  box-shadow: unset;
+	  width: 50%;
+	
+	  
+  } 
+
+  .info {
+	float: right;
+	margin-top: 15%;
+	margin-left: 0.5%;
+	border-radius: 25px;
+	border: 0;
+	box-shadow: unset;
+	width: 45%;
+	
+} 
+  
+.cont5 span {
+	background: #FEC20C;
+	font-weight: 700;
+	text-align: center;
+	font-family: Lato;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 1%;
+	margin: 10px;
+	font-size: 25px;
+	border-radius: 25px;
+	color: #00A3E8;
+	
+	}
+
+	    
+  .caption{
+	font-family: Lato;
+  }
+
+  /**/
+  
+  
+  footer b { 
+	background-color:#15afbf;
+	float: left;
+	width: 98%;
+	padding: 20px;
+	justify-content: space-between;
+	border-radius: 25px;
+	margin-top: 1%;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+  
+	

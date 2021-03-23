@@ -42,3 +42,7 @@ Project created by: Lina Orozco, Vasily Patrashkevich and Dallas Rowling
 ### 1.9 ###
 
 - "Hot Deals" section added to index.html completing Assignment 7
+
+### 1.10 ###
+
+- "Contact Page update
