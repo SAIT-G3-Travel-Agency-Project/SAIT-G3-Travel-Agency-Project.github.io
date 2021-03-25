@@ -31,8 +31,10 @@
     background-color: cornflowerblue;
     border-radius: 50%;
     border: 1px solid white;
+    padding: 10px;
+    font-size: 1.25rem;
   }
-  select {
+  /*select {
   appearance: none;
   background-color: transparent;
   border: none;
@@ -43,6 +45,59 @@
   cursor: inherit;
   line-height: inherit;
   outline: none;
+  }*/
+  select {
+  border: 1px solid #777;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+input[type=text]{
+    font-size: 1.25rem;
+}
+.blocked{
+    appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none; 
+}
+  .personinput{
+    padding:10px;
+    border-radius: 10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    width: 2em;
+    font-size: 1.25em;
+  }
+  button {
+    padding:10px;
+    border:none;
+    background-color:#3F51B5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:100%;
+}
+form {
+    font-size: 1.25rem;
+    border: 1px solid #777;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 </style>
 <!-- Script for the Packages Page-->
@@ -58,12 +113,12 @@
         /* Validate the inputs first */
         var dest = document.getElementById('destination').value;
         var numadults = document.getElementById('adults').value;
-        if (isNaN(numadults) || numadults< 0 || numadults > 10 ) {
+        if (isNaN(numadults) || numadults< 0 || numadults > 9 ) {
             document.getElementById('adults').value=0;
             numadults=0;
         }
         var numkids = document.getElementById('children').value;
-        if (isNaN(numkids) || numkids < 0 || numkids > 10 ) {
+        if (isNaN(numkids) || numkids < 0 || numkids > 9 ) {
             document.getElementById('children').value=0;
             numkids=0;
         }
@@ -83,20 +138,20 @@
       <!-- END HEADER -->
    
 <form name="guests">
-    <tr>Destination
+    <table cellpadding="0" cellspacing="0"></table>
+    <tr><td>Destination</td>
      <select id="destination" name="destination" onChange="calculate();">
      <option value="Bali">Bali</option>
      <option value="California">California</option>
      <option value="Fiji">Fiji</option>
      <option value="Dubai">Dubai</option>
      </select>
-    <table cellpadding="0" cellspacing="0">
 	</tr>
     <tr>
         <td>Adults</td>
         <td><input type="button" class="btn" id="plusminus" value="-" onclick="guests.adults.value = parseInt(guests.adults.value) - 1; calculate();"></td>
         <td style="width: 1px;">
-                <input type="text" name="adults" id="adults" value="2" size=2 onchange="calculate()">
+                <input type="text" name="adults" id="adults" class="personinput" value="2" onchange="calculate()">
             </td>
             <td><input type="button" class="btn" id="plusminus" value="+" onclick="guests.adults.value = parseInt(guests.adults.value) + 1; calculate();"></td>
         </tr>
@@ -104,12 +159,12 @@
             <td>Children</td>
             <td><input type="button" class="btn" id="plusminus" value="-" onclick="guests.children.value = parseInt(guests.children.value) - 1; calculate();"></td>
             <td style="width: 1px;">
-                <input type="text" name="children" id="children" value="0" onchange="calculate()" size=2>
+                <input type="text" name="children" id="children" value="0" onchange="calculate()" class="personinput">
             </td>
             <td><input type="button" class="btn" id="plusminus" value="+" onclick="guests.children.value = parseInt(guests.children.value) + 1; calculate();"></td>
         </tr>
-        <tr><td>Total<input type="text" id="price" size=8 value=4000 disabled></td></tr>
-        <tr><td><input type="button" name="book" value="Book Now"></td></tr>
+        <tr><td>Total</td><td><input type="text" class="blocked" id="price" size=8 value=4000 disabled></td></tr>
+        <tr><td><button class="button" name="book">Book Now!</button></td></tr>
     </table>
 </form>
    <!-- END BODY -->
