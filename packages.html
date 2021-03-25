@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Style sheet for the Packages Page-->
+<style>
+  .btn {
+    color: white;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+  select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+</style>
+<!-- Script for the Packages Page-->
+<script>
+    /* Tour cost table */
+    var cost = {
+       'Bali': {'adult': 6000, 'kid' : 4000},
+        'California': {'adult': 1000, 'kid' : 500},
+        'Fiji': {'adult': 4000, 'kid' : 2000},
+        'Dubai': {'adult': 3000, 'kid' : 1500}
+    };
+    function calculate() {
+        /* Validate the inputs first */
+        var dest = document.getElementById('destination').value;
+        var numadults = document.getElementById('adults').value;
+        if (isNaN(numadults) || numadults< 0 || numadults > 10 ) {
+            document.getElementById('adults').value=0;
+            numadults=0;
+        }
+        var numkids = document.getElementById('children').value;
+        if (isNaN(numkids) || numkids < 0 || numkids > 10 ) {
+            document.getElementById('children').value=0;
+            numkids=0;
+        }
+        var price = cost[dest].adult * numadults + cost[dest].kid * numkids;
+        document.getElementById('price').value = price;
+    };
+</script>
+<form name="guests">
+    <tr>Destination
+     <select id="destination" name="destination" onChange="calculate();">
+     <option value="Bali">Bali</option>
+     <option value="California">California</option>
+     <option value="Fiji">Fiji</option>
+     <option value="Dubai">Dubai</option>
+     </select>
+    <table cellpadding="0" cellspacing="0">
+	</tr>
+    <tr>
+        <td>Adults</td>
+        <td><input type="button" class="btn" id="plusminus" value="-" onclick="guests.adults.value = parseInt(guests.adults.value) - 1; calculate();"></td>
+        <td style="width: 1px;">
+                <input type="text" name="adults" id="adults" value="2" size=2 onchange="calculate()">
+            </td>
+            <td><input type="button" class="btn" id="plusminus" value="+" onclick="guests.adults.value = parseInt(guests.adults.value) + 1; calculate();"></td>
+        </tr>
+        <tr>
+            <td>Children</td>
+            <td><input type="button" class="btn" id="plusminus" value="-" onclick="guests.children.value = parseInt(guests.children.value) - 1; calculate();"></td>
+            <td style="width: 1px;">
+                <input type="text" name="children" id="children" value="0" onchange="calculate()" size=2>
+            </td>
+            <td><input type="button" class="btn" id="plusminus" value="+" onclick="guests.children.value = parseInt(guests.children.value) + 1; calculate();"></td>
+        </tr>
+        <tr><td>Total<input type="text" id="price" size=8 value=4000 disabled></td></tr>
+        <tr><td><input type="button" name="book" value="Book Now"></td></tr>
+    </table>
+</form>
+
+</html>
